@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tech Fest
+        </title>
+        <style>
+            body{
+               background-image:url("img.jpg");
+                background-size:cover;
+            }
+*{
+    padding:0px;
+    margin:0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+#parent{
+    border:3px solid rgb(255, 255, 255);
+    width:450px;
+    height:80vh;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#body{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.input{
+    width:60%;
+    
+    input{
+        width:100%;
+        height:28px;
+        border-radius: 2px;
+        border:2px solid white;
+        background: none;
+        font-size: 20px;
+        color:white;
+        padding:4px;
+        margin-bottom: 40px;
+
+    }
+}
+.input1{
+    width:180px;
+    height:60px;
+    font-size: 25px;
+    background-color: cyan;
+    border:4px solid white;
+    border-radius: 5px;
+    margin:5px;
+}
+p{
+    padding-bottom:7px;
+    font-size: 18px;
+    color:beige;
+}
+
+.sequence{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+.bottombutton{
+    display:flex;
+   
+}
+
+label{
+    color:white;
+}
+        </style>
+        <script>
+window.onload=function  onload1(){document.getElementById('second').style.display="none";
+            document.getElementById('third').style.display="none";
+        };
+            function validate(){
+                if ((document.form.name1.value)==null || (document.form.name1.value)==""){
+                    alert("provide a name");
+                    return false;
+                }
+                else if((document.form.password.value).length<8){
+                    alert("use greater password");
+                    return false;
+                }
+
+             
+                else if(isNaN(document.form.number.value) || (document.form.number.value)==null || 
+                (document.form.number.value)==""  ||  (Math.floor(document.form.number.value)<=9000000000)  ||  
+                (Math.floor(document.form.number.value)>=9999999999)){
+                    alert("Enter proper mobile no.s");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+      
+        <div id="body">
+   
+        <form name="form" onsubmit="return validate()">
+            <div id="parent">
+                <h1 style="font-size: 40px; color:rgb(52, 255, 187); padding:30px 30px 0px 30px;  margin-bottom:30px; border-bottom: 2px solid black;">
+                   __TECH FEST__
+                </h1>
+                <div id="first" class="sequence">
+                <div class="input">
+                  
+                        <P>Full Name</P>
+            <input type="text" name="name1" placeholder="Name" required>
+        </div>
+            <div class="input"><P> Password</P>
+            <input type="password" name="password" required>
+        </div>
+            <div class="input"><P>Mobile NO.</P>
+            <input type="text" name="number" required>
+        </div>
+            <input type="button" value="Next" class="input1" onclick="document.getElementById('first').style.display='none'; 
+            document.getElementById('second').style.display='flex';">
+        </div>
+
+
+
+
+
+        <div id="second" class="sequence">
+            <div class="input">
+              
+                    <P>Course</P>
+                    <input type="text" name="course" disabled value="B.TECH">
+    </div>
+        <div class="input">
+            <P> Type of development</P>
+            <div  style="display:flex; margin: 10px; border-bottom: 2px solid grey;">
+            <label for="frontend">
+                Frontend
+            </label>
+        <input type="checkbox" name="frontend" style="height:20px; margin:0px;">
+    </div>
+    <div  style="display:flex;  margin: 10px;  border-bottom: 2px solid grey;">
+        <label for="backend">
+            Backend
+        </label>
+        <input type="checkbox" name="backend" style="height:20px; margin: 0px; border-bottom: 2px solid grey;">
+    </div>
+        <div  style="display:flex;  margin: 10px;  margin-bottom: 60px; border-bottom: 2px solid grey;">
+        <label for="fullstack">
+            Fullstack
+        </label>
+        <input type="checkbox" name="fullstack" style="height:20px;  margin: 0px;">
+    </div></div>
+       
+    <div class="bottombutton">
+    <input type="button" value="Previous" class="input1" onclick="document.getElementById('second').style.display='none'; 
+            document.getElementById('first').style.display='flex';">
+
+    <input type="button" value="Next" class="input1" onclick="document.getElementById('second').style.display='none'; 
+            document.getElementById('third').style.display='flex';">
+    </div>
+</div>
+
+
+
+
+
+    <div id="third" class="sequence">
+        <div class="input">
+          
+              
+   
+</div>
+    <div class="input"><P> Project Name</P>
+    <input type="text" required name="project name" >
+</div>
+    <div class="input"><P>Gmail</P>
+    <input type="email" required name="Gmail" placeholder="xyz@gmail.com">
+</div>
+<div class="bottombutton">
+<input type="button" value="Previous" class="input1" onclick="document.getElementById('third').style.display='none'; 
+        document.getElementById('second').style.display='flex';">
+
+<input type="submit" value="Submit" class="input1">
+</div>
+</div>
+
+
+
+
+
+
+
+    </div>
+    </div>
+        </form>
+    </body>
+</html>

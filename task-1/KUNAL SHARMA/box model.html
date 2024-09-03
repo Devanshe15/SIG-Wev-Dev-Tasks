@@ -1,0 +1,65 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>
+            CSS
+        </title>
+        <style>
+            div{
+                border-radius: 15px;
+                box-shadow: 0px 0px 30px 8px black;
+            }
+            #body1{
+                margin:20px;
+                background-color: green;
+                width:fit-content;
+                display:flex;
+                
+            }
+            #parent{
+        
+                margin:60px;
+                padding:60px;
+                width:fit-content;
+                background-color: skyblue;
+                border:60px solid yellow;
+              
+              
+            }
+            #child{
+                width:60vw;
+                height:40vh;
+                background-color: red;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+              
+            }
+        </style>
+        <script>
+            function parent(){
+                document.getElementsByTagName('h1')[0].innerHTML="Box : Larger <br>  Green : Margin  <br> Skyblue : Padding <br> Yellow : Border";
+            }
+            function nill(){
+                document.getElementsByTagName('h1')[0].innerHTML="Hover to check (div)";
+            
+            }
+            function child(){
+                document.getElementsByTagName('h1')[0].innerHTML="Box : Smaller  <br> Color : Red";
+            
+            }
+        </script>
+    </head>
+    <body>
+        <div id="body1">
+            <div id="parent" onmouseenter="parent()" onmouseleave="nill()">
+                <div id="child" onmouseenter="child()" onmouseleave="parent()">
+                    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    color:white;">
+                        Hover to check (div)
+                    </h1>
+                </div>
+            </div>
+        </div>
+        </body>
+</html>
