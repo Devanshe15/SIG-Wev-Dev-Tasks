@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="margin" onmouseenter="change(`Margin`)" onmouseleave="back()">
+        <div
+          class="border"
+          onmouseenter="change('Border')"
+          onmouseleave="back()"
+        >
+          <div
+            class="padding"
+            onmouseenter="change(`Padding`)"
+            onmouseleave="back()"
+          >
+            <div
+              class="content"
+              onmouseenter="change(`Content`)"
+              onmouseleave="back()"
+            >
+              <p id="text">helo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function change(val) {
+      document.getElementById("text").innerHTML = val;
+    }
+    function back() {
+      location.reload();
+    }
+  </script>
+</html>
