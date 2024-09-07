@@ -1,0 +1,41 @@
+.margin{
+    background: rgb(7, 233, 7);
+    width: 600px;
+    height: 400px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.border{
+    background: orange;
+    width: 500px;
+    height: 300px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.padding{
+    background: blue;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content{
+    background: red;
+    width: 200px;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Tech Fest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>TechBlaze</h1>
+        <h3>Register Now</h3>
+        <form action="/">
+            <label for="email">E-mail <span class="required">*</span></label>
+            <input type="email" name="email" id="email" placeholder="jhon@doe.com" required>
+
+            <label for="fname">First Name <span class="required">*</span></label>
+            <input type="text" name="fname" id="fname" placeholder="Jhon" required>
+
+            <label for="lname">Last Name <span class="required">*</span></label>
+            <input type="text" name="lname" id="lname" placeholder="Doe" required>
+
+            <label for="year">Year <span class="required">*</span></label>
+            <select name="year" id="year">
+                <option value="select">--Select--</option>
+                <option value="first">First</option>
+                <option value="second">Second</option>
+                <option value="third">Third</option>
+                <option value="fouth">Fouth</option>
+            </select>
+
+            <label for="branch">Branch <span class="required">*</span></label>
+            <select name="branch" id="branch">
+                <option value="select">--Select--</option>
+                <option value="CS">Computer Science</option>
+                <option value="AIML">AI/ML</option>
+                <option value="DS">Data Science</option>
+                <option value="IT">Information Technology</option>
+            </select>
+
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" name="password" id="password" placeholder="***********" required>
+
+            <label for="cpassword">Confirm Password <span class="required">*</span></label>
+            <input type="password" name="cpassword" id="cpassword" placeholder="***********" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+
+</body>
+
+</html>

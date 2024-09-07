@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SUSE';
+}
+
+body {
+    /* margin: 20px; */
+    width: 100vw;
+    height: 100vh;
+    /* background: url('https://plus.unsplash.com/premium_vector-1682302161500-8ce42f1e56f7?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+    /* background: url('https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+    background: url('./bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.container {
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    /* background: #c7f27ec2; */
+    width: 600px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: rgb(212, 204, 204);
+
+    /* From https://css.glass */
+    background: rgba(212, 212, 212, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(212, 212, 212, 0.72);
+
+}
+
+.container h1,
+.container h3 {
+    display: grid;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+label {
+    font-size: 15px;
+    margin: 2px;
+}
+
+form {
+    margin: 25px;
+    display: grid;
+}
+
+input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    /* outline: none; */
+    border: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    
+    /* text-align: ; */
+
+    /* From https://css.glass */
+    background: rgba(212, 212, 212, 0.6);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.7px);
+    -webkit-backdrop-filter: blur(8.7px);
+    border: 1px solid rgba(212, 212, 212, 0.72);
+}
+
+input[type=submit] {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    background: #30b3ef;
+    outline: none;
+}
+
+#branch,
+#year {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    /* outline: none; */
+    border: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: rgb(212, 204, 204);
+
+    background: rgba(212, 212, 212, 0.6);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(212, 212, 212, 0.72);
+}
+
+.required {
+    font-size: 15px;
+    color: rgb(255, 0, 0);
+}
